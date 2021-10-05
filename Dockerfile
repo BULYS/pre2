@@ -3,10 +3,11 @@
 
 # 使用 Java 12
 FROM openjdk:12-alpine
+
+WORKDIR /app/
 # 向容器内复制文件
 COPY ./* /app/
 # 编译程序
-WORKDIR /app/
 RUN javac -d ./output ./src/Compiler.java
 # 将当前目录设为 /app/output
 WORKDIR /app/output
