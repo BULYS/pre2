@@ -9,6 +9,6 @@ WORKDIR /app/
 # COPY ./* /app/
 COPY ./ /app/
 # 编译程序
-RUN javac -d ./output ./src/Compiler.java
+RUN javac -d ./output ./Compiler.java
 # 将当前目录设为 /app/output
 WORKDIR /app/output
