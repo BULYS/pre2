@@ -9,5 +9,6 @@ image = { source = "dockerfile", path = "." }
 # 假如你用的是 Java
 run = [
   # 运行程序
-  "java src.Compiler $input",
+  "cd src",
+  "java Compiler $input",
 ]
