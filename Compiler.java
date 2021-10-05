@@ -43,7 +43,7 @@ public class Compiler {
                         System.out.println("Ident("+str+")");
                 }
                 else if (ch=='=') {
-                    if (line.charAt(i+1)=='=') {
+                    if (i+1<line.length()&&line.charAt(i+1)=='=') {
                         System.out.println("Eq");
                         i++;
                     }
