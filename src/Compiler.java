@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 public class Compiler {
     public static void main(String [] args) throws IOException {
@@ -130,5 +128,22 @@ public class Compiler {
             return "Return";
         else
             return "ToT";
+    }
+}
+class Reader {
+    private String in ;
+    private File file;
+    private FileReader reader;
+    private BufferedReader bufferedReader;
+
+    public Reader(String file) throws FileNotFoundException {
+        this.in = file;
+        this.file = new File(in);
+        this.reader = new FileReader(file);
+        this.bufferedReader = new BufferedReader(reader);
+    }
+
+    public BufferedReader getBufferedReader() {
+        return bufferedReader;
     }
 }
